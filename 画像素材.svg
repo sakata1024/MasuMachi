@@ -7,36 +7,36 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="画像素材.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 210 297"
+   width="210mm"
    height="297mm"
-   width="210mm">
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="画像素材.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     inkscape:snap-object-midpoints="true"
-     inkscape:snap-midpoints="true"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-11"
-     inkscape:window-x="-11"
-     inkscape:window-height="1410"
-     inkscape:window-width="2256"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="542.04204"
-     inkscape:cx="488.9904"
-     inkscape:zoom="5.4436646"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     id="base"
      pagecolor="#ffffff"
-     id="base" />
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8952201"
+     inkscape:cx="526.73095"
+     inkscape:cy="836.38514"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2256"
+     inkscape:window-height="1410"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -45,62 +45,73 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
+     inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
-     inkscape:label="レイヤー 1">
+     id="layer1">
     <rect
-       inkscape:export-ydpi="101.27256"
-       inkscape:export-xdpi="101.27256"
-       ry="10.585989"
-       y="47.71595"
-       x="44.713951"
-       height="63.041931"
-       width="63.041931"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:export-ydpi="101.27256"
-       inkscape:export-xdpi="101.27256"
-       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\arrow1.png"
-       sodipodi:nodetypes="sssccss"
-       d="m 108.15089,129.16487 h 50.71795 c 3.41374,0 6.16199,2.71424 6.16199,6.08573 v 8.87521 H 101.9889 v -8.87521 c 0,-3.37149 2.74825,-6.08573 6.16199,-6.08573 z"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.15777;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect10-8" />
-    <path
-       inkscape:export-ydpi="101.27256"
-       inkscape:export-xdpi="101.27256"
-       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\arrow1.png"
-       inkscape:transform-center-y="-1.204417"
-       inkscape:transform-center-x="1.7110854e-06"
-       d="m 137.45748,140.54711 -8.34443,0 4.17221,-7.22649 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="1.5707963"
-       sodipodi:arg1="0.52359878"
-       sodipodi:r2="2.4088299"
-       sodipodi:r1="4.8176599"
-       sodipodi:cy="138.13827"
-       sodipodi:cx="133.28526"
-       sodipodi:sides="3"
-       id="path851"
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
-    <rect
-       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\panel1.png"
-       style="fill:#05ffff;fill-opacity:1;fill-rule:evenodd;stroke:#05ffff;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect10-1"
        width="63.041931"
        height="63.041931"
-       x="46.204697"
-       y="191.40387"
-       ry="0"
+       x="44.713951"
+       y="47.71595"
+       ry="10.585989"
        inkscape:export-xdpi="101.27256"
        inkscape:export-ydpi="101.27256" />
+    <path
+       id="rect10-8"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.15777;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 108.15089,129.16487 h 50.71795 c 3.41374,0 6.16199,2.71424 6.16199,6.08573 v 8.87521 H 101.9889 v -8.87521 c 0,-3.37149 2.74825,-6.08573 6.16199,-6.08573 z"
+       sodipodi:nodetypes="sssccss"
+       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\arrow1.png"
+       inkscape:export-xdpi="101.27256"
+       inkscape:export-ydpi="101.27256" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path851"
+       sodipodi:sides="3"
+       sodipodi:cx="133.28526"
+       sodipodi:cy="138.13827"
+       sodipodi:r1="4.8176599"
+       sodipodi:r2="2.4088299"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 137.45748,140.54711 -8.34443,0 4.17221,-7.22649 z"
+       inkscape:transform-center-x="1.7110854e-06"
+       inkscape:transform-center-y="-1.204417"
+       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\arrow1.png"
+       inkscape:export-xdpi="101.27256"
+       inkscape:export-ydpi="101.27256" />
+    <rect
+       inkscape:export-ydpi="101.27256"
+       inkscape:export-xdpi="101.27256"
+       ry="0"
+       y="139.72963"
+       x="6.1077461"
+       height="63.041931"
+       width="63.041931"
+       id="rect10-1"
+       style="fill:#05ffff;fill-opacity:1;fill-rule:evenodd;stroke:#05ffff;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\panel1.png" />
+    <rect
+       inkscape:export-filename="C:\Users\skt97\Documents\UnityProject\MasuMachi\Assets\Sprites\TownGround1.png"
+       inkscape:export-ydpi="104.68481"
+       inkscape:export-xdpi="104.68481"
+       ry="10.585989"
+       y="194.91127"
+       x="73.698875"
+       height="81.330246"
+       width="105.62164"
+       id="rect842"
+       style="fill:#6cc700;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.165;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>
