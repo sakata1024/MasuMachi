@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// グリッドを生成してくれる工場クラス
+/// </summary>
 public class GridPanelFactory : MonoBehaviour
 {
-    public GridPanel gridPanelPrefab;
+    [SerializeField]
+    GridPanel gridPanelPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    // GridPanelを生成する関数
+    public GridPanel[] MakeGridPanels(int panelCount)
     {
-        MakeGridPanels(3);
-    }
+        GridPanel[] panels = new GridPanel[panelCount*panelCount];
 
-    public void MakeGridPanels(int panelCount)
-    {
         for (int i = 0; i < panelCount; i++)
         {
             for (int j = 0; j < panelCount; j++)
             {
-                Vector3 pos = new Vector2(j - panelCount / 2, i - panelCount / 2) * 2f;
+                Vector3 pos = new Vector2(j - panelCount / 2, panelCount / 2 - i) * 2f; // この辺でサイズが変わる
                 pos.z = -0.1f;
                 GameObject instance = Instantiate(gridPanelPrefab.gameObject, transform, false);
                 instance.transform.localPosition = pos;
+                panels[i * panelCount + j] = instance.GetComponent<GridPanel>();
+                panels[i * panelCount + j].Setup(i * panelCount + j);
             }
         }
+
+        return panels;
     }
 }

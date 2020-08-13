@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingBlock
 {
-    private int populationTerm;
-    private int moneyTerm;
+    protected int populationTerm;
+    protected int moneyTerm;
     
 }
