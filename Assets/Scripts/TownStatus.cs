@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TownStatus : MonoBehaviour
 {
-    private float deltaPopulation = 1f;
-    private float deltaMoney = 100f;
-    private float deltaHappy = 0.1f;
+    private float deltaPopulation = 100f;
+    private float deltaMoney = 10000f;
+    private float deltaHappy = 0.01f;
     private float _currentPopulation;
     private float _currentMoney;
     private float _currentHappy;
@@ -57,7 +57,6 @@ public class TownStatus : MonoBehaviour
     {
         _currentTime = 0f;
         isStarted = false;
-        GetStart();
     }
 
     public void Setup(float firstPopulation, float firstMoney, float firstHappy, int targetPopulation, int targetMoney, int targetHappy)
@@ -93,6 +92,7 @@ public class TownStatus : MonoBehaviour
     public void Finish()
     {
         isStarted = false;
+        Town.Instance.PlayFinish();
     }
 
     private void UpdateStatus()
@@ -100,9 +100,9 @@ public class TownStatus : MonoBehaviour
         //TODO: doAction等を追加したら戻す
         //var blockList = Town.Instance.townGrid.GetAllTownBuildingBlock();
 
-        _currentPopulation += deltaPopulation;
-        _currentMoney += deltaMoney;
-        _currentHappy += deltaHappy;
+        _currentPopulation += deltaPopulation * Time.deltaTime;
+        _currentMoney += deltaMoney * Time.deltaTime;
+        _currentHappy += deltaHappy * Time.deltaTime;
 
         _currentHappy = Mathf.Clamp(_currentHappy, -1, 1);
     }

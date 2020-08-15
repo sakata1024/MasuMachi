@@ -15,19 +15,19 @@ public class UIHappy : MonoBehaviour
     void Start()
     {
         if (currentTextComponent)
-            currentTextComponent.text = Town.Instance.townStatus.currentHappy.ToString();
+            currentTextComponent.text = Town.Instance.townStatus.currentHappy.ToString("F2");
 
         if (targetTextComponent)
-            targetTextComponent.text = Town.Instance.townStatus.targetHappy.ToString();
+            targetTextComponent.text = Town.Instance.townStatus.targetHappy.ToString("F2");
     }
 
     // Update is called once per frame
     void Update()
     {
         if (currentTextComponent)
-            currentTextComponent.text = Town.Instance.townStatus.currentHappy.ToString();
+            currentTextComponent.text = Town.Instance.townStatus.currentHappy.ToString("F2");
 
         if (targetTextComponent)
-            targetTextComponent.text = Town.Instance.townStatus.targetHappy.ToString();
+            targetTextComponent.text = Town.Instance.townStatus.targetHappy.ToString("F2");
     }
 }

@@ -5,7 +5,10 @@ using UnityEngine;
 public class Town : MonoBehaviour
 {
     [SerializeField]
-    private TownGrid _townGrid; // 場のグリッド
+    private TownGrid _townGrid = null; // 場のグリッド
+
+    [SerializeField]
+    private GameObject finishPanel = null;
 
     public TownGrid townGrid
     {
@@ -13,7 +16,7 @@ public class Town : MonoBehaviour
     }
 
     [SerializeField]
-    private TownStatus _townStatus; // 街状態の管理
+    private TownStatus _townStatus = null; // 街状態の管理
 
     public TownStatus townStatus
     {
@@ -47,6 +50,16 @@ public class Town : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void PlayStart()
+    {
+        townStatus.GetStart();
+    }
+
+    public void PlayFinish()
+    {
+        finishPanel.SetActive(true);
     }
 
     private void OnDestroy()
