@@ -95,4 +95,9 @@ public class TownGrid : MonoBehaviour
             grid[idx].Set(buildingObject);
         }
     }
+
+    public List<BuildingBlock> GetAllTownBuildingBlock()
+    {
+        return grid.Select(x => x.townBlock).Distinct().Select(x => x.buildingBlock).ToList();
+    }
 }
