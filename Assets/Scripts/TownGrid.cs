@@ -7,20 +7,26 @@ public class TownGrid : MonoBehaviour
 {
     private GridPanelFactory factory; // グリッド生成クラス
     private GridPanel[] grid; // パネルの1次元配列
-    private int stageSize = 3; // 街グリッドサイズ(削除予定)
+    private int stageSize; // 街グリッドサイズ(削除予定)
 
     // Start is called before the first frame update
     void Start()
     {
-        factory = GetComponent<GridPanelFactory>();
 
-        grid = factory.MakeGridPanels(stageSize);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Setup(LevelData level)
+    {
+        stageSize = level.stageSize;
+        factory = GetComponent<GridPanelFactory>();
+        grid = factory.MakeGridPanels(stageSize);
+
     }
 
     // 該当するパネルにハイライトする関数

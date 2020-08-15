@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 806490}
   - component: {fileID: 806493}
   - component: {fileID: 806492}
-  - component: {fileID: 806491}
   m_Layer: 5
   m_Name: TargetMoneyText
   m_TagString: Untagged
@@ -159,20 +158,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5.662096, y: -18.169144}
   m_SizeDelta: {x: 102.60886, y: 24.862747}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &806491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33235c109210e0468860b48a70303ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTextComponent: {fileID: 0}
-  targetTextComponent: {fileID: 0}
 --- !u!114 &806492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTextComponent: {fileID: 1390507182}
   targetTextComponent: {fileID: 806492}
+  moneyStar: {fileID: 1461480973}
 --- !u!1 &339818671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1553,7 @@ GameObject:
   - component: {fileID: 730493573}
   - component: {fileID: 730493572}
   - component: {fileID: 730493571}
+  - component: {fileID: 730493574}
   m_Layer: 5
   m_Name: FinishPanel
   m_TagString: Untagged
@@ -1652,6 +1639,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730493569}
   m_CullTransparentMesh: 0
+--- !u!114 &730493574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730493569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0453384d8726774f9b9981b5b991e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationStar: {fileID: 1196014787}
+  happyStar: {fileID: 1681335399}
+  moneyStar: {fileID: 219059484}
 --- !u!1 &818332148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTextComponent: {fileID: 2109135482}
   targetTextComponent: {fileID: 1474489799}
+  happyStar: {fileID: 1601113916}
 --- !u!1 &851227319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,7 +1723,6 @@ GameObject:
   - component: {fileID: 851227320}
   - component: {fileID: 851227323}
   - component: {fileID: 851227322}
-  - component: {fileID: 851227321}
   m_Layer: 5
   m_Name: TargetPopulationText
   m_TagString: Untagged
@@ -1747,20 +1749,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -38.294838}
   m_SizeDelta: {x: 102.60886, y: 24.862747}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &851227321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851227319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33235c109210e0468860b48a70303ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTextComponent: {fileID: 0}
-  targetTextComponent: {fileID: 0}
 --- !u!114 &851227322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2472,6 +2460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTextComponent: {fileID: 2010486225}
   targetTextComponent: {fileID: 851227322}
+  populationStar: {fileID: 1685716876}
 --- !u!1 &1148544444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3166,6 @@ GameObject:
   - component: {fileID: 1474489797}
   - component: {fileID: 1474489800}
   - component: {fileID: 1474489799}
-  - component: {fileID: 1474489798}
   m_Layer: 5
   m_Name: TargetHappyText
   m_TagString: Untagged
@@ -3204,20 +3192,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.500011, y: -26.417992}
   m_SizeDelta: {x: 102.60886, y: 24.862747}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1474489798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474489796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33235c109210e0468860b48a70303ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTextComponent: {fileID: 0}
-  targetTextComponent: {fileID: 0}
 --- !u!114 &1474489799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,6 +3244,7 @@ GameObject:
   - component: {fileID: 1505466052}
   - component: {fileID: 1505466051}
   - component: {fileID: 1505466053}
+  - component: {fileID: 1505466054}
   m_Layer: 0
   m_Name: TownMaster
   m_TagString: TownMaster
@@ -3292,7 +3267,8 @@ MonoBehaviour:
   _townGrid: {fileID: 905112352}
   finishPanel: {fileID: 730493569}
   _townStatus: {fileID: 1505466053}
-  townSize: 3
+  townLevel: 0
+  allLevelData: {fileID: 11400000, guid: 8f532e94a45edd841ba4b65dba7d92a0, type: 2}
 --- !u!4 &1505466052
 Transform:
   m_ObjectHideFlags: 0
@@ -3319,6 +3295,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958f977d5bbdf1a448ff1b1d11b36ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1505466054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505466050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4857284ae0c33fa48bf3a1ca2e3414c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  populationText: {fileID: 1629041353}
+  happyText: {fileID: 1854756399}
+  moneyText: {fileID: 135136207}
 --- !u!1 &1506238899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,7 +4205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8773585, g: 0.1489854, b: 0.1489854, a: 1}
+  m_Color: {r: 0.87736, g: 0.14899, b: 0.14899, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4233,7 +4224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Finish!!!
+  m_Text: FINISH!!!
 --- !u!222 &1855004571
 CanvasRenderer:
   m_ObjectHideFlags: 0

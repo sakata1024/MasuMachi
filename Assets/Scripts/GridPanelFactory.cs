@@ -8,7 +8,7 @@ using UnityEngine;
 public class GridPanelFactory : MonoBehaviour
 {
     [SerializeField]
-    GridPanel gridPanelPrefab;
+    GridPanel gridPanelPrefab = null;
 
     // GridPanelを生成する関数
     public GridPanel[] MakeGridPanels(int panelCount)

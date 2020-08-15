@@ -11,6 +11,9 @@ public class UIPopulation : MonoBehaviour
     [SerializeField]
     private Text targetTextComponent = null;
 
+    [SerializeField]
+    private GameObject populationStar = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +32,14 @@ public class UIPopulation : MonoBehaviour
 
         if (targetTextComponent)
             targetTextComponent.text = Town.Instance.townStatus.targetPopulation.ToString();
+
+        if (Town.Instance.townStatus.isAchivePopulation)
+        {
+            populationStar.SetActive(true);
+        }
+        else
+        {
+            populationStar.SetActive(false);
+        }
     }
 }

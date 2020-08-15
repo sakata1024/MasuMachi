@@ -11,6 +11,9 @@ public class UIMoney : MonoBehaviour
     [SerializeField]
     private Text targetTextComponent = null;
 
+    [SerializeField]
+    private GameObject moneyStar = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +32,14 @@ public class UIMoney : MonoBehaviour
 
         if (targetTextComponent)
             targetTextComponent.text = Town.Instance.townStatus.targetMoney.ToString();
+
+        if (Town.Instance.townStatus.isAchiveMoney)
+        {
+            moneyStar.SetActive(true);
+        }
+        else
+        {
+            moneyStar.SetActive(false);
+        }
     }
 }

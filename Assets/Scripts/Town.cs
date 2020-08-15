@@ -22,8 +22,11 @@ public class Town : MonoBehaviour
     {
         get { return _townStatus; }
     }
+    
+    public Level townLevel = Level.Beginner; // 街のレベル
 
-    public int townSize = 3; // 街グリッドのサイズ
+    [SerializeField]
+    AllLevelData allLevelData = null;
 
     private static Town _instance; // シングルトン
 
@@ -43,7 +46,9 @@ public class Town : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        LevelData levelData = allLevelData.GetLevelData(townLevel);
+        townStatus.Setup(levelData);
+        townGrid.Setup(levelData);
     }
 
     // Update is called once per frame
@@ -60,6 +65,7 @@ public class Town : MonoBehaviour
     public void PlayFinish()
     {
         finishPanel.SetActive(true);
+        GetComponent<FinishManager>().FinishAction();
     }
 
     private void OnDestroy()

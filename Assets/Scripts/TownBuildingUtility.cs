@@ -24,15 +24,15 @@ public static class TownBuildingUtility
         List<int> result = new List<int>();
 
         var currentPanelIdx = buildingObject.currentPanel.index;
-        var center_x = currentPanelIdx % Town.Instance.townSize;
-        var center_y = currentPanelIdx / Town.Instance.townSize;
+        var center_x = currentPanelIdx % Town.Instance.townStatus.stageSize;
+        var center_y = currentPanelIdx / Town.Instance.townStatus.stageSize;
 
         foreach (var item in buildingObject.blockList)
         {
             // 範囲外にあれば-1を入れる
-            if((center_x + item.x) >= 0 && (center_x + item.x) < Town.Instance.townSize && (center_y + item.y) >= 0 && (center_y + item.y) < Town.Instance.townSize)
+            if((center_x + item.x) >= 0 && (center_x + item.x) < Town.Instance.townStatus.stageSize && (center_y + item.y) >= 0 && (center_y + item.y) < Town.Instance.townStatus.stageSize)
             {
-                result.Add((center_x + item.x) + Town.Instance.townSize * (center_y + item.y));
+                result.Add((center_x + item.x) + Town.Instance.townStatus.stageSize * (center_y + item.y));
             }
             else
             {

@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class TownStatus : MonoBehaviour
 {
-    private float deltaPopulation = 100f;
-    private float deltaMoney = 10000f;
+    private float deltaPopulation = 10000f;
+    private float deltaMoney = 1000000f;
     private float deltaHappy = 0.01f;
     private float _currentPopulation;
     private float _currentMoney;
     private float _currentHappy;
-    private int _targetPopulation;
-    private int _targetMoney;
-    private int _targetHappy;
+    private float _targetPopulation;
+    private float _targetMoney;
+    private float _targetHappy;
 
     private float _currentTime;
     private bool isStarted = false;
+
+    public int stageSize
+    {
+        get;
+        private set;
+    }
 
     public int currentPopulation
     {
@@ -34,17 +40,32 @@ public class TownStatus : MonoBehaviour
 
     public int targetPopulation
     {
-        get { return _targetPopulation; }
+        get { return (int)_targetPopulation; }
     }
 
     public int targetMoney
     {
-        get { return _targetMoney; }
+        get { return (int)_targetMoney; }
     }
 
     public float targetHappy
     {
         get { return Mathf.Floor(_targetHappy * 10000) / 100; }
+    }
+
+    public bool isAchivePopulation
+    {
+        get { return currentPopulation >= targetPopulation; }
+    }
+
+    public bool isAchiveMoney
+    {
+        get { return currentMoney >= targetMoney; }
+    }
+
+    public bool isAchiveHappy
+    {
+        get { return currentHappy >= targetHappy; }
     }
 
     public int currentTime
@@ -59,14 +80,15 @@ public class TownStatus : MonoBehaviour
         isStarted = false;
     }
 
-    public void Setup(float firstPopulation, float firstMoney, float firstHappy, int targetPopulation, int targetMoney, int targetHappy)
+    public void Setup(LevelData levelData)
     {
-        _currentPopulation = firstPopulation;
-        _currentMoney = firstMoney;
-        _currentHappy = firstHappy;
-        _targetPopulation = targetPopulation;
-        _targetMoney = targetMoney;
-        _targetHappy = targetHappy;
+        stageSize = levelData.stageSize;
+        _currentPopulation = levelData.firstPopulation;
+        _currentMoney = levelData.firstMoney;
+        _currentHappy = levelData.firstHappy;
+        _targetPopulation = levelData.targetPopulation;
+        _targetMoney = levelData.targetMoney;
+        _targetHappy = levelData.targetHappy;
     }
 
     public void GetStart()

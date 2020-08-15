@@ -11,6 +11,9 @@ public class UIHappy : MonoBehaviour
     [SerializeField]
     private Text targetTextComponent = null;
 
+    [SerializeField]
+    private GameObject happyStar = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +32,14 @@ public class UIHappy : MonoBehaviour
 
         if (targetTextComponent)
             targetTextComponent.text = Town.Instance.townStatus.targetHappy.ToString("F2");
+
+        if (Town.Instance.townStatus.isAchiveHappy)
+        {
+            happyStar.SetActive(true);
+        }
+        else
+        {
+            happyStar.SetActive(false);
+        }
     }
 }
