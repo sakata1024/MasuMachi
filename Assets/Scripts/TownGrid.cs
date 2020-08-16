@@ -119,6 +119,7 @@ public class TownGrid : MonoBehaviour
             var destroy_indices = TownBuildingUtility.GridPanelsToIndices(grid[indices[0]].townBlock);
             destroy_indices.ForEach(i => grid[i].ResetPanel());
             Destroy(buildingObject.gameObject);
+            SEPlayer.Instance.PlaySE("bomb");
 
             return;
         }
@@ -133,8 +134,10 @@ public class TownGrid : MonoBehaviour
             }
 
             grid[idx].Set(buildingObject);
+            
             grid[idx].townBlock.buildingBlock.OnSetAction();
         }
+        SEPlayer.Instance.PlaySE("build");
     }
 
     public List<BuildingBlock> GetAllTownBuildingBlock()

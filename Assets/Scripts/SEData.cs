@@ -9,9 +9,9 @@ public class SEData : ScriptableObject
     [SerializeField]
     private List<SE> seList = new List<SE>();
 
-    public AudioClip GetSE(string name)
+    public SE GetSE(string name)
     {
-        return seList.SingleOrDefault(x => x.name == name).source;
+        return seList.SingleOrDefault(x => x.name == name);
     }
 
     [System.Serializable]
@@ -19,5 +19,7 @@ public class SEData : ScriptableObject
     {
         public string name;
         public AudioClip source;
+        [Range(0f,1f)]
+        public float volume;
     }
 }

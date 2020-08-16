@@ -23,12 +23,16 @@ public class SceneLoader : MonoBehaviour
     private void Start()
     {
         beginnerButton.onClick.AddListener(() => ClickAction(Level.Beginner));
+
+        BGMPlayer.Instance.PlayBGM("Title");
         //eliteButton.onClick.AddListener(() => ClickAction(Level.Elite));
         //proButton.onClick.AddListener(() => ClickAction(Level.Pro));
     }
 
     public void ClickAction(Level level)
     {
+        BGMPlayer.Instance.StopBGM();
+        SEPlayer.Instance.PlaySE("detect");
         loadingPanel.SetActive(true);
 
         this.level = level;

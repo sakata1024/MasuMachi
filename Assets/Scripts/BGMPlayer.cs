@@ -48,7 +48,7 @@ public class BGMPlayer : MonoBehaviour
     {
         if (isPlay)
         {
-            audioSource.volume = 1;
+            audioSource.volume = 0.2f;
         }
         else
         {

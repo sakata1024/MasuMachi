@@ -35,7 +35,18 @@ public class UIEndStar : MonoBehaviour
         if (Town.Instance.townStatus.isAchiveMoney)
         {
             StartCoroutine(BlightStar(moneyStar));
+            SEPlayer.Instance.PlaySE("star");
         }
+    }
+
+    public void PlayFinishSE()
+    {
+        SEPlayer.Instance.PlaySE("finish");
+    }
+
+    public void PlayDisplaySE()
+    {
+        SEPlayer.Instance.PlaySE("display");
     }
 
     IEnumerator BlightStar(Image star)

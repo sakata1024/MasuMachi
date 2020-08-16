@@ -8,5 +8,16 @@ public class ReadyStartManager : MonoBehaviour
     {
         Town.Instance.PlayStart();
         gameObject.SetActive(false);
+        BGMPlayer.Instance.PlayBGM("Main");
+    }
+
+    public void PlayCountSE()
+    {
+        SEPlayer.Instance.PlaySE("countdown");
+    }
+
+    public void PlayStartSE()
+    {
+        SEPlayer.Instance.PlaySE("start");
     }
 }

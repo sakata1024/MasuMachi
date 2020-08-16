@@ -9,6 +9,8 @@ public class SceneReloader : MonoBehaviour
     public void ClickAction()
     {
         SceneManager.LoadScene("TitleScene");
+        SEPlayer.Instance.PlaySE("detect");
+        BGMPlayer.Instance.StopBGM();
     }
 
 }

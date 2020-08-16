@@ -32,8 +32,8 @@ public class SEPlayer : MonoBehaviour
 
     public void PlaySE(string name)
     {
-        AudioClip clip = se_data.GetSE(name);
-        audioSource.PlayOneShot(clip);
+        SEData.SE se = se_data.GetSE(name);
+        audioSource.PlayOneShot(se.source, se.volume);
     }
 
     public void ChangeVolume(bool isPlay)

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: BGMData
   m_EditorClassIdentifier: 
   bgmList:
-  - name: 
-    source: {fileID: 0}
+  - name: Title
+    source: {fileID: 8300000, guid: e09f71685b390f140b64245ef3d28969, type: 3}
+  - name: Main
+    source: {fileID: 8300000, guid: dba264348e3e84c438f17534f8839fb2, type: 3}

@@ -13,5 +13,27 @@ MonoBehaviour:
   m_Name: SEData
   m_EditorClassIdentifier: 
   seList:
-  - name: 
-    source: {fileID: 0}
+  - name: detect
+    source: {fileID: 8300000, guid: 3ede09b25e1f94d46a5b15806f1665b5, type: 3}
+    volume: 1
+  - name: countdown
+    source: {fileID: 8300000, guid: 815bd6fa14bce204b89f4b79bd563924, type: 3}
+    volume: 1
+  - name: start
+    source: {fileID: 8300000, guid: 00eb2464be425274994beabda716c7de, type: 3}
+    volume: 1
+  - name: build
+    source: {fileID: 8300000, guid: 3bc7605cf3da20341867492b9e3e8a29, type: 3}
+    volume: 1
+  - name: bomb
+    source: {fileID: 8300000, guid: 36e9ddde87688e24a9d0b12702b17a43, type: 3}
+    volume: 1
+  - name: finish
+    source: {fileID: 8300000, guid: 01ae040ce0759ec488c24f8bb0180e7e, type: 3}
+    volume: 1
+  - name: display
+    source: {fileID: 8300000, guid: 33cdf27f966b2de4d857cf7211f16ca8, type: 3}
+    volume: 1
+  - name: star
+    source: {fileID: 8300000, guid: e6613010e09e16e448c337917d7f9dee, type: 3}
+    volume: 1
