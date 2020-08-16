@@ -58,4 +58,9 @@ public class GridPanel : MonoBehaviour
 
     }
 
+    public void ResetPanel()
+    {
+        this.townBlock = null;
+    }
+
 }

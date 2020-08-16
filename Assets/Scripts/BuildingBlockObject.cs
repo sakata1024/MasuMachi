@@ -11,6 +11,8 @@ using UnityEngine.EventSystems;
 public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
     public TownBuildingBlockObject townBuildingBlockPrefab; //場に生成するオブジェクトのプレハブ
+    //public UITermPanel termPanelPrefab;
+    //private GameObject termPanel;
     private TownBuildingBlockObject townBuildingBlockInstance; //場に生成したインスタンス。ドラッグ終了まで見る
     public List<Vector2Int> blockList = new List<Vector2Int>(); //ブロックがある位置
     public BuildingBlock buildingBlock; //BuildingBlockデータクラス
@@ -104,5 +106,21 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
         townBuildingBlockInstance = null;
     }
 
+    /*public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (buildBarrier.activeInHierarchy)
+        {
+            termPanel = Instantiate(termPanelPrefab.gameObject, GameObject.Find("Canvas").transform);
+            termPanel.GetComponent<UITermPanel>().SetUp(buildingBlock);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (buildBarrier.activeInHierarchy)
+        {
+            DestroyImmediate(termPanel);
+        }
+    }*/
     
 }

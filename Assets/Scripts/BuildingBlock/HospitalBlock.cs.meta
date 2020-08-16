@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 11efa8fcd6deb974d95f2df8de43f1f5
+guid: 21d7d25fc1424c240a8437368571176c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - townBuildingBlockPrefab: {instanceID: 0}
-  - termPanelPrefab: {instanceID: 0}
-  - buildBarrier: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

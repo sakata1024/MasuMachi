@@ -124,11 +124,17 @@ public class TownStatus : MonoBehaviour
         var blockList = Town.Instance.townGrid.GetAllTownBuildingBlock();
         blockList.ForEach(x => x.OnUpdateAction());
 
+        if(currentPopulation > targetPopulation)
+        {
+            deltaHappy = deltaHappy - 0.001f * Time.deltaTime;
+        }
+
         _currentPopulation += deltaPopulation * Time.deltaTime;
         _currentMoney += deltaMoney * Time.deltaTime;
         _currentHappy += deltaHappy * Time.deltaTime;
 
         _currentHappy = Mathf.Clamp(_currentHappy, -1, 1);
+        _currentPopulation = Mathf.Clamp(_currentPopulation, 0, float.MaxValue);
     }
 
     public void ChangeStatus(float changePopulation = 0f, float changeMoney=0f, float changeHappy=0f, float changePopulationRate=1f, float changeMoneyRate=1f, float changeHappyRate = 1f)

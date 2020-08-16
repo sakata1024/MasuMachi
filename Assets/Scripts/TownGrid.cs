@@ -45,6 +45,10 @@ public class TownGrid : MonoBehaviour
         // 今設置が不可能ならハイライトしない(NGパネルとかほしい)
         if (!CanSetBuilding(buildingObject))
         {
+            if(buildingObject.buildingBlock is Bomb)
+            {
+                return;
+            }
             if (indices.All(i => i != -1))
             {
                 indices.ForEach(i => grid[i].BadHighLight());
@@ -52,8 +56,15 @@ public class TownGrid : MonoBehaviour
             return;
         }
 
+        if (buildingObject.buildingBlock is Bomb)
+        {
+            var block_indices = TownBuildingUtility.GridPanelsToIndices(grid[indices[0]].townBlock);
+            block_indices.ForEach(i => grid[i].HighLight());
+            return;
+        }
+
         // はみ出していなければハイライトする
-        if(indices.All(i => i != -1))
+        if (indices.All(i => i != -1))
         {
             indices.ForEach(i => grid[i].HighLight());
         }
@@ -83,6 +94,12 @@ public class TownGrid : MonoBehaviour
             return false;
         }
 
+        if (buildingObject.buildingBlock is Bomb)
+        {
+            if (buildingObject.currentPanel.townBlock != null) return true;
+            else return false;
+        }
+
         // TownBuildingBlockを重複なしで取得
         List<TownBuildingBlockObject> oldBuildings = buildingIndices.Select(x => grid[x].townBlock).Where(x => x != null).Distinct().ToList();
 
@@ -94,6 +111,18 @@ public class TownGrid : MonoBehaviour
     public void SetBuilding(TownBuildingBlockObject buildingObject)
     {
         var indices = TownBuildingUtility.GridPanelsToIndices(buildingObject);
+        if(buildingObject.buildingBlock is Bomb)
+        {
+            
+            grid[indices[0]].townBlock.buildingBlock.OnDestroyAction();
+            Destroy(grid[indices[0]].townBlock.gameObject);
+            var destroy_indices = TownBuildingUtility.GridPanelsToIndices(grid[indices[0]].townBlock);
+            destroy_indices.ForEach(i => grid[i].ResetPanel());
+            Destroy(buildingObject.gameObject);
+
+            return;
+        }
+
         foreach (var idx in indices)
         {
             // 被っているTownBlockは削除

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class BuildingBlock
 {
-    protected int populationTerm;
-    protected int moneyTerm;
+    public int populationTerm;
+    public int moneyTerm;
 
     public bool CanBuild()
     {

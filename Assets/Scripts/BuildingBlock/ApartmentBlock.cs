@@ -40,6 +40,6 @@ public class Apartment : BuildingBlock
 
     public override void OnDestroyAction()
     {
-        Town.Instance.townStatus.ChangeStatus(changeMoney: -50000, changePopulationRate: -1/1.6f, changeMoneyRate: 1/2f, changeHappyRate: 0.9f);
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -50000, changePopulationRate: 1/1.6f, changeMoneyRate: 1/2f, changeHappyRate: 0.9f);
     }
 }

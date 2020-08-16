@@ -318,5 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   townBuildingBlockPrefab: {fileID: 6313449090932208351, guid: b7f226a9c53806b4aa00b811475a84ba,
     type: 3}
+  termPanelPrefab: {fileID: -2217208222728637145, guid: a810bb3fe62007143b956221aaa7681a,
+    type: 3}
   blockList: []
   buildBarrier: {fileID: 4545852573269511706}
