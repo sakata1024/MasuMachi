@@ -14,6 +14,7 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
     private TownBuildingBlockObject townBuildingBlockInstance; //場に生成したインスタンス。ドラッグ終了まで見る
     public List<Vector2Int> blockList = new List<Vector2Int>(); //ブロックがある位置
     public BuildingBlock buildingBlock; //BuildingBlockデータクラス
+    public GameObject buildBarrier;
     protected float scale = 1f; // 1ブロックの縮小率
 
     // Start is called before the first frame update
@@ -25,7 +26,14 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
     // Update is called once per frame
     protected virtual void Update()
     {
-        
+        if (buildingBlock.CanBuild())
+        {
+            buildBarrier.SetActive(false);
+        }
+        else
+        {
+            buildBarrier.SetActive(true);
+        }
     }
 
     // 90度右に回転する関数
@@ -56,12 +64,17 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
     // 自身がクリックされたときの動作
     public void OnPointerClick(PointerEventData eventData)
     {
-        TurnBuildingObject();
+        if(buildingBlock.CanBuild())
+            TurnBuildingObject();
     }
 
     // ドラッグ開始時の処理(TownBuildingBlockObjectの生成)
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!buildingBlock.CanBuild())
+        {
+            return;
+        }
         Vector2 screenPos = eventData.pressPosition;
         Vector3 worldPos = eventData.pressEventCamera.ScreenToWorldPoint(screenPos);
         worldPos.z = -5;
@@ -73,12 +86,20 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
     // ドラッグ時の処理(TownBlockに依存)
     public void OnDrag(PointerEventData eventData)
     {
+        if (!buildingBlock.CanBuild())
+        {
+            return;
+        }
         townBuildingBlockInstance.OnDrag(eventData);
     }
 
     // ドラッグ終了時の処理(解放)
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!buildingBlock.CanBuild())
+        {
+            return;
+        }
         townBuildingBlockInstance.OnEndDrag(eventData);
         townBuildingBlockInstance = null;
     }

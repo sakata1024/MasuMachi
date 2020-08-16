@@ -2,9 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingBlock
+public abstract class BuildingBlock
 {
     protected int populationTerm;
     protected int moneyTerm;
-    
+
+    public bool CanBuild()
+    {
+        return (Town.Instance.townStatus.currentPopulation >= populationTerm && Town.Instance.townStatus.currentMoney >= moneyTerm);
+    }
+
+    public abstract void OnSetAction();
+
+    public abstract void OnUpdateAction();
+
+    public abstract void OnDestroyAction();
 }

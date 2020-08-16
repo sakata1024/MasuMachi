@@ -27,4 +27,19 @@ public class School : BuildingBlock
         populationTerm = 10000;
         moneyTerm = 2000000;
     }
+
+    public override void OnSetAction()
+    {
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -1000000,changeHappy: 0.1f, changePopulationRate: 1.2f, changeHappyRate: 1.4f);
+    }
+
+    public override void OnUpdateAction()
+    {
+        
+    }
+
+    public override void OnDestroyAction()
+    {
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -1000000, changeHappy: -0.3f, changePopulationRate: 0.8f, changeHappyRate: 1/1.4f);
+    }
 }

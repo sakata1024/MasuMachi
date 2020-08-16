@@ -7,6 +7,10 @@ public class GridPanel : MonoBehaviour
     private SpriteRenderer spriteRenderer; // 自分自身のspriteRenderer
     public TownBuildingBlockObject townBlock; //このパネルが参照するtownBlock
     public int index; //グリッドから見たインデックス
+    [SerializeField]
+    GameObject incorrectSprite = null;
+    [SerializeField]
+    GameObject correctSprite = null;
 
     private void Start()
     {
@@ -25,11 +29,23 @@ public class GridPanel : MonoBehaviour
         Color c = spriteRenderer.color;
         c.a = 1.0f;
         spriteRenderer.color = c;
+
+        if (townBlock != null)
+        {
+            correctSprite.SetActive(true);
+        }
+    }
+
+    public void BadHighLight()
+    {
+        incorrectSprite.SetActive(true);
     }
 
     // ハイライトの終了
     public void CancelHighLight()
     {
+        incorrectSprite.SetActive(false);
+        correctSprite.SetActive(false);
         Color c = spriteRenderer.color;
         c.a = 0.3f;
         spriteRenderer.color = c;

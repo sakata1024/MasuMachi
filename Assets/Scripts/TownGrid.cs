@@ -40,13 +40,17 @@ public class TownGrid : MonoBehaviour
             return;
         }
 
+        var indices = TownBuildingUtility.GridPanelsToIndices(buildingObject);
+
         // 今設置が不可能ならハイライトしない(NGパネルとかほしい)
         if (!CanSetBuilding(buildingObject))
         {
+            if (indices.All(i => i != -1))
+            {
+                indices.ForEach(i => grid[i].BadHighLight());
+            }
             return;
         }
-
-        var indices = TownBuildingUtility.GridPanelsToIndices(buildingObject);
 
         // はみ出していなければハイライトする
         if(indices.All(i => i != -1))
@@ -95,15 +99,17 @@ public class TownGrid : MonoBehaviour
             // 被っているTownBlockは削除
             if(grid[idx].townBlock != null)
             {
+                grid[idx].townBlock.buildingBlock.OnDestroyAction();
                 Destroy(grid[idx].townBlock.gameObject);
             }
 
             grid[idx].Set(buildingObject);
+            grid[idx].townBlock.buildingBlock.OnSetAction();
         }
     }
 
     public List<BuildingBlock> GetAllTownBuildingBlock()
     {
-        return grid.Select(x => x.townBlock).Distinct().Select(x => x.buildingBlock).ToList();
+        return grid.Where(x => x.townBlock != null).Select(x => x.townBlock).Distinct().Select(x => x.buildingBlock).ToList();
     }
 }

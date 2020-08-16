@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TownStatus : MonoBehaviour
 {
-    private float deltaPopulation = 10000f;
-    private float deltaMoney = 1000000f;
+    private float deltaPopulation = 1000f;
+    private float deltaMoney = 100000f;
     private float deltaHappy = 0.01f;
     private float _currentPopulation;
     private float _currentMoney;
@@ -120,7 +121,8 @@ public class TownStatus : MonoBehaviour
     private void UpdateStatus()
     {
         //TODO: doAction等を追加したら戻す
-        //var blockList = Town.Instance.townGrid.GetAllTownBuildingBlock();
+        var blockList = Town.Instance.townGrid.GetAllTownBuildingBlock();
+        blockList.ForEach(x => x.OnUpdateAction());
 
         _currentPopulation += deltaPopulation * Time.deltaTime;
         _currentMoney += deltaMoney * Time.deltaTime;
@@ -129,7 +131,7 @@ public class TownStatus : MonoBehaviour
         _currentHappy = Mathf.Clamp(_currentHappy, -1, 1);
     }
 
-    private void ChangeStatus(float changePopulation = 0f, float changeMoney=0f, float changeHappy=0f, float changePopulationRate=1f, float changeMoneyRate=1f, float changeHappyRate = 1f)
+    public void ChangeStatus(float changePopulation = 0f, float changeMoney=0f, float changeHappy=0f, float changePopulationRate=1f, float changeMoneyRate=1f, float changeHappyRate = 1f)
     {
         _currentPopulation += changePopulation;
         _currentMoney += changeMoney;

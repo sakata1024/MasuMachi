@@ -404,8 +404,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.3, y: -18.420998}
-  m_SizeDelta: {x: 104.26053, y: 39.344154}
+  m_AnchoredPosition: {x: 36.7, y: -18.420998}
+  m_SizeDelta: {x: 140.7319, y: 39.344154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135136207
 MonoBehaviour:
@@ -4950,6 +4950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Housing
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011909841648310036, guid: bf1a84a8e38b45b47ad9114937f9d6b6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5112749033140815752, guid: bf1a84a8e38b45b47ad9114937f9d6b6,
         type: 3}

@@ -23,6 +23,21 @@ public class Housing : BuildingBlock
     public Housing()
     {
         populationTerm = 100;
-        moneyTerm = 20000;
+        moneyTerm = 10000;
+    }
+
+    public override void OnSetAction()
+    {
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -10000, changePopulationRate: 1.2f,changeMoneyRate: 1.5f, changeHappyRate: 0.99f);
+    }
+
+    public override void OnUpdateAction()
+    {
+
+    }
+
+    public override void OnDestroyAction()
+    {
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -5000, changePopulationRate: 1/1.2f, changeMoneyRate: 1/1.5f, changeHappy: -0.05f);
     }
 }
