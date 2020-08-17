@@ -20,7 +20,7 @@ public class Station : BuildingBlock
     public Station()
     {
         populationTerm = 200000;
-        moneyTerm = 10000000;
+        moneyTerm = 1000000;
     }
 
     public override void OnSetAction()

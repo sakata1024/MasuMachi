@@ -18,5 +18,5 @@ MonoBehaviour:
   firstMoney: 10000
   firstHappy: 0.5
   targetPopulation: 100000
-  targetMoney: 800000
+  targetMoney: 1000000
   targetHappy: 0.8

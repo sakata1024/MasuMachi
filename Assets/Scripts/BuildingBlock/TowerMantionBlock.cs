@@ -19,13 +19,13 @@ public class TowerMantion : BuildingBlock
 {
     public TowerMantion()
     {
-        populationTerm = 1000000;
+        populationTerm = 300000;
         moneyTerm = 100000;
     }
 
     public override void OnSetAction()
     {
-        Town.Instance.townStatus.ChangeStatus(changeMoney: -50000, changePopulation: 100000, changePopulationRate: 1.7f, changeMoneyRate: 1.7f, changeHappy: 0.1f);
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -50000, changePopulation: 10000, changePopulationRate: 1.7f, changeMoneyRate: 1.7f, changeHappy: 0.1f);
     }
 
     public override void OnUpdateAction()
@@ -35,6 +35,6 @@ public class TowerMantion : BuildingBlock
 
     public override void OnDestroyAction()
     {
-        Town.Instance.townStatus.ChangeStatus(changeMoney: -1000000, changePopulation: -100000, changePopulationRate: 1/1.4f, changeMoneyRate: 1/1.7f, changeHappy: -0.2f);
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -100000, changePopulation: -10000, changePopulationRate: 1/1.4f, changeMoneyRate: 1/1.7f, changeHappy: -0.2f);
     }
 }

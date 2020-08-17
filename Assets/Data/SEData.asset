@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seList:
   - name: detect
-    source: {fileID: 8300000, guid: 3ede09b25e1f94d46a5b15806f1665b5, type: 3}
+    source: {fileID: 8300000, guid: 4728e7101d0c5494cb758037b6c3e1fa, type: 3}
     volume: 1
   - name: countdown
-    source: {fileID: 8300000, guid: 815bd6fa14bce204b89f4b79bd563924, type: 3}
+    source: {fileID: 8300000, guid: 62674e1056d026641b1b967bc21c8666, type: 3}
     volume: 1
   - name: start
-    source: {fileID: 8300000, guid: 00eb2464be425274994beabda716c7de, type: 3}
+    source: {fileID: 8300000, guid: 642ea3c5df8602f409abc33e163e5aa5, type: 3}
     volume: 1
   - name: build
-    source: {fileID: 8300000, guid: 3bc7605cf3da20341867492b9e3e8a29, type: 3}
+    source: {fileID: 8300000, guid: 91a1372380078bf41bde0c5f12352073, type: 3}
     volume: 1
   - name: bomb
-    source: {fileID: 8300000, guid: 36e9ddde87688e24a9d0b12702b17a43, type: 3}
+    source: {fileID: 8300000, guid: 314214cea640e434c95a642df2e2dbf6, type: 3}
     volume: 1
   - name: finish
-    source: {fileID: 8300000, guid: 01ae040ce0759ec488c24f8bb0180e7e, type: 3}
+    source: {fileID: 8300000, guid: 5346890344ba12f4bbace6a872a12c07, type: 3}
     volume: 1
   - name: display
-    source: {fileID: 8300000, guid: 33cdf27f966b2de4d857cf7211f16ca8, type: 3}
+    source: {fileID: 8300000, guid: d2bea184f5e9ddd4397312e58cc33273, type: 3}
     volume: 1
   - name: star
-    source: {fileID: 8300000, guid: e6613010e09e16e448c337917d7f9dee, type: 3}
+    source: {fileID: 8300000, guid: 194a04dc9e5879448a17d536e22a6ef5, type: 3}
     volume: 1

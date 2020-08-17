@@ -35,7 +35,6 @@ public class UIEndStar : MonoBehaviour
         if (Town.Instance.townStatus.isAchiveMoney)
         {
             StartCoroutine(BlightStar(moneyStar));
-            SEPlayer.Instance.PlaySE("star");
         }
     }
 
@@ -52,6 +51,8 @@ public class UIEndStar : MonoBehaviour
     IEnumerator BlightStar(Image star)
     {
         float h, s, v;
+
+        SEPlayer.Instance.PlaySE("star");
 
         Color.RGBToHSV(star.color, out h, out s, out v);
 

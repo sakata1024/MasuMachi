@@ -6,7 +6,7 @@ using UnityEngine;
 public class TownStatus : MonoBehaviour
 {
     private float deltaPopulation = 1000f;
-    private float deltaMoney = 100000f;
+    private float deltaMoney = 30000f;
     private float deltaHappy = 0.01f;
     private float _currentPopulation;
     private float _currentMoney;
@@ -127,6 +127,11 @@ public class TownStatus : MonoBehaviour
         if(currentPopulation > targetPopulation)
         {
             deltaHappy = deltaHappy - 0.001f * Time.deltaTime;
+        }
+
+        if(currentTime >= 40)
+        {
+            deltaPopulation = deltaPopulation - 600f * Time.deltaTime;
         }
 
         _currentPopulation += deltaPopulation * Time.deltaTime;
