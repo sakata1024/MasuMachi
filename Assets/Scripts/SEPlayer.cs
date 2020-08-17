@@ -25,9 +25,17 @@ public class SEPlayer : MonoBehaviour
 
     private void Awake()
     {
-        _instance = this;
-        audioSource = GetComponent<AudioSource>();
-        DontDestroyOnLoad(gameObject);
+        if(_instance == null)
+        {
+            _instance = this;
+            audioSource = GetComponent<AudioSource>();
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        
     }
 
     public void PlaySE(string name)

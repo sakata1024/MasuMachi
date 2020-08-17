@@ -25,7 +25,7 @@ public class Hospital : BuildingBlock
 
     public override void OnSetAction()
     {
-        Town.Instance.townStatus.ChangeStatus(changeMoney: -1000000, changePopulationRate: 1.2f, changeHappy: 0.05f, changeHappyRate: 1.01f);
+        Town.Instance.townStatus.ChangeStatus(changeMoney: -1000000, changePopulationRate: 1.2f, changeHappy: 0.1f, changeHappyRate: 1.01f);
     }
 
     public override void OnUpdateAction()

@@ -25,9 +25,16 @@ public class BGMPlayer : MonoBehaviour
 
     private void Awake()
     {
-        _instance = this;
-        audioSource = GetComponent<AudioSource>();
-        DontDestroyOnLoad(gameObject);
+        if(_instance == null)
+        {
+            _instance = this;
+            audioSource = GetComponent<AudioSource>();
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void PlayBGM(string name)
