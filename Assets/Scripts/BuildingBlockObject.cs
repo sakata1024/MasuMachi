@@ -98,11 +98,11 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
     // ドラッグ終了時の処理(解放)
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!buildingBlock.CanBuild())
+        /*if (!buildingBlock.CanBuild())
         {
             return;
-        }
-        townBuildingBlockInstance.OnEndDrag(eventData);
+        }*/
+        townBuildingBlockInstance?.OnEndDrag(eventData);
         townBuildingBlockInstance = null;
     }
 

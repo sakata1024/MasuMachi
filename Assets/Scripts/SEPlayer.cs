@@ -11,6 +11,12 @@ public class SEPlayer : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public static bool isSound
+    {
+        get;
+        private set;
+    } = true;
+
     public static SEPlayer Instance
     {
         get
@@ -25,17 +31,25 @@ public class SEPlayer : MonoBehaviour
 
     private void Awake()
     {
-        if(_instance == null)
+        if(_instance != null)
         {
-            _instance = this;
-            audioSource = GetComponent<AudioSource>();
-            DontDestroyOnLoad(gameObject);
+            Destroy(_instance.gameObject);
+        }
+        _instance = this;
+        audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        if (isSound)
+        {
+            audioSource.volume = 1f;
         }
         else
         {
-            Destroy(this.gameObject);
+            audioSource.volume = 0;
         }
-        
     }
 
     public void PlaySE(string name)
@@ -46,7 +60,8 @@ public class SEPlayer : MonoBehaviour
 
     public void ChangeVolume(bool isPlay)
     {
-        if (isPlay)
+        isSound = isPlay;
+        if (isSound)
         {
             audioSource.volume = 1;
         }

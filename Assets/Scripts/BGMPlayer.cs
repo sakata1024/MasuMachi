@@ -11,6 +11,12 @@ public class BGMPlayer : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public static bool isSound
+    {
+        get;
+        private set;
+    } = true;
+
     public static BGMPlayer Instance
     {
         get
@@ -25,15 +31,24 @@ public class BGMPlayer : MonoBehaviour
 
     private void Awake()
     {
-        if(_instance == null)
+        if (_instance != null)
         {
-            _instance = this;
-            audioSource = GetComponent<AudioSource>();
-            DontDestroyOnLoad(gameObject);
+            Destroy(_instance.gameObject);
+        }
+        _instance = this;
+        audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        if (isSound)
+        {
+            audioSource.volume = 0.2f;
         }
         else
         {
-            Destroy(this.gameObject);
+            audioSource.volume = 0;
         }
     }
 
@@ -53,7 +68,8 @@ public class BGMPlayer : MonoBehaviour
 
     public void ChangeVolume(bool isPlay)
     {
-        if (isPlay)
+        isSound = isPlay;
+        if (isSound)
         {
             audioSource.volume = 0.2f;
         }
