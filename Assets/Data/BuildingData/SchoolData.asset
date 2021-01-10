@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594c5344509b0504c9f87dd2a323fc42, type: 3}
+  m_Name: SchoolData
+  m_EditorClassIdentifier: 
+  buildingType: 4
+  size: {x: 2, y: 2}
+  buildingBlockDataList:
+  - buildingImage: {fileID: 21300000, guid: 8d5c92ef3b634e64e9e9cb01e1f2acc4, type: 3}
+    pos: {x: 0, y: 1}
+  - buildingImage: {fileID: 21300000, guid: f21bf1cab3dde654ca530dba8c73eca8, type: 3}
+    pos: {x: 0, y: 0}
+  - buildingImage: {fileID: 21300000, guid: bd865cd4aeb43804e931462156ac28db, type: 3}
+    pos: {x: 1, y: 1}

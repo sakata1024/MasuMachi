@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655c0548e96f733439253422287d17b9, type: 3}
-  m_Name: BeginnerData
+  m_Script: {fileID: 11500000, guid: 594c5344509b0504c9f87dd2a323fc42, type: 3}
+  m_Name: HousingData
   m_EditorClassIdentifier: 
-  level: 0
-  stageSize: 4
-  firstPopulation: 100
-  firstMoney: 10000
-  firstHappy: 0.5
-  targetPopulation: 100000
-  targetMoney: 1000000
-  targetHappy: 0.8
+  buildingType: 1
+  size: {x: 1, y: 1}
+  buildingBlockDataList:
+  - buildingImage: {fileID: 21300000, guid: 7c90b15b75a93fe4399e662a9f8683e7, type: 3}
+    pos: {x: 0, y: 0}
