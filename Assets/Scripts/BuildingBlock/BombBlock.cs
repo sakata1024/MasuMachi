@@ -17,7 +17,7 @@ public class Bomb: BuildingBlock
 {
     public Bomb()
     {
-        populationTerm = int.MinValue;
+        populationTerm = 0;
         moneyTerm = int.MinValue;
     }
 

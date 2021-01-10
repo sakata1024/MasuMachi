@@ -57,9 +57,10 @@ public class BuildingBlockObject : MonoBehaviour, IPointerClickHandler, IDragHan
         foreach (Transform child in transform)
         {
             GameObject instance = Instantiate(child.gameObject, townObject.transform);
+            float stageScale = GridUtility.GetGridCellSize(Town.Instance.townStatus.stageSize) / (instance.GetComponent<SpriteRenderer>().sprite.bounds.size.x);
             instance.transform.localPosition = child.transform.localPosition - origin.transform.localPosition;
-            instance.transform.localPosition *= 1.0f / scale;
-            instance.transform.localScale *= 1.0f / scale;
+            instance.transform.localPosition = Vector3.Scale(instance.transform.localPosition, new Vector3(1.0f / scale * stageScale, 1.0f / scale * stageScale, 1f));
+            instance.transform.localScale = Vector3.Scale(instance.transform.localScale, new Vector3(1.0f / scale * stageScale, 1.0f / scale * stageScale, 1f));
         }
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BeginnerData
   m_EditorClassIdentifier: 
   level: 0
-  stageSize: 4
+  stageSize: 7
   firstPopulation: 100
   firstMoney: 10000
   firstHappy: 0.5

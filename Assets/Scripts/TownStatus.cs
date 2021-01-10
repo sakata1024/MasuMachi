@@ -24,14 +24,14 @@ public class TownStatus : MonoBehaviour
         private set;
     }
 
-    public int currentPopulation
+    public ulong currentPopulation
     {
-        get { return (int)_currentPopulation; }
+        get { return (ulong)_currentPopulation; }
     }
 
-    public int currentMoney
+    public long currentMoney
     {
-        get { return (int)_currentMoney; }
+        get { return (long)_currentMoney; }
     }
 
     public float currentHappy
@@ -56,12 +56,12 @@ public class TownStatus : MonoBehaviour
 
     public bool isAchivePopulation
     {
-        get { return currentPopulation >= targetPopulation; }
+        get { return currentPopulation >= (ulong)targetPopulation; }
     }
 
     public bool isAchiveMoney
     {
-        get { return currentMoney >= targetMoney; }
+        get { return currentMoney >= (long)targetMoney; }
     }
 
     public bool isAchiveHappy
@@ -124,7 +124,7 @@ public class TownStatus : MonoBehaviour
         var blockList = Town.Instance.townGrid.GetAllTownBuildingBlock();
         blockList.ForEach(x => x.OnUpdateAction());
 
-        if(currentPopulation > targetPopulation)
+        if(currentPopulation > (ulong)targetPopulation)
         {
             deltaHappy = deltaHappy - 0.001f * Time.deltaTime;
         }

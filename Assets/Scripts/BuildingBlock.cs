@@ -9,7 +9,7 @@ public abstract class BuildingBlock
 
     public bool CanBuild()
     {
-        return (Town.Instance.townStatus.currentPopulation >= populationTerm && Town.Instance.townStatus.currentMoney >= moneyTerm);
+        return (Town.Instance.townStatus.currentPopulation >= (ulong)populationTerm && Town.Instance.townStatus.currentMoney >= (long)moneyTerm);
     }
 
     public abstract void OnSetAction();
