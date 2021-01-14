@@ -74,6 +74,11 @@ public class TownStatus : MonoBehaviour
         get { return (int)_currentTime; }
     }
 
+    public float currentFloatTime
+    {
+        get { return _currentTime; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

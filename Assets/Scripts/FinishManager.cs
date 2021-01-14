@@ -14,10 +14,14 @@ public class FinishManager : MonoBehaviour
     [SerializeField]
     private Text moneyText = null;
 
+    [SerializeField]
+    private ScoreGraphManager scoreGraphManager = null;
+
     public void FinishAction()
     {
         populationText.text = Town.Instance.townStatus.currentPopulation.ToString();
         happyText.text = Town.Instance.townStatus.currentHappy.ToString("F2");
         moneyText.text = Town.Instance.townStatus.currentMoney.ToString();
+        scoreGraphManager.Finish();
     }
 }
